@@ -1,0 +1,14 @@
+@each $key, $val in $images-style {
+    .img-#{$key} {
+        border-radius: $val;
+    }
+}
+
+.img-responsive {
+    max-width: map-get($images-responsible, "pref-w");
+    height: map-get($images-responsible, "pref-h");
+}
+
+.img-blur {
+    filter : blur(6px);
+}

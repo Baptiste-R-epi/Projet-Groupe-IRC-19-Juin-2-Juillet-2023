@@ -1,0 +1,62 @@
+//spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// spacing letter
+$base-line-height: 0.75rem;
+
+//borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+// colors
+$primary: #326dee;
+$secondary: #819990;
+$success: #1ac85d;
+$error: #d32522;
+$warning: #eba21a;
+$muted: #969292;
+$info: #2aa9cf;
+
+// Map test
+$colors: (
+    "primary" : $primary,
+    "secondary" : $secondary,
+    "success" : $success,
+    "error" : $error,
+    "warning" : $warning,
+    "muted" : $muted,
+    "info" : $info,
+    "red" : #ec1919,
+    "orange" : #ff9b17,
+    "yellow" : #f5e12e,
+    "green" : #29d43f,
+    "blue" : #1919ec,
+    "purple" : #9f23b8,
+    "white" : #ffffff,
+    "gray" : #888787,
+    "black" : #000000,
+    "darkpurple" : #6c42c7,
+);
+
+$images-style : ("rounded" : 16px,
+    "circle" : 50%,
+    "thumbnail" : 4px,
+);
+
+$images-responsible : ("w" : 100%,
+    "h" : auto,
+    "pref-w" : 30px,
+    "pref-h" : 30px);
+
+// box shadows
+$base-box-shadow: 1px 3px 5px #000000af;
+
+// font sizes
+$base-font-size: 1rem;
+$sm-font-size: $base-font-size * 0.75;
+$smmd-font-size: $base-font-size * 1;
+$md-font-size: $base-font-size * 1.25;
+$lg-font-size: $base-font-size * 1.75;
+$xl-font-size: $base-font-size * 2.25;
+$xxl-font-size: $base-font-size * 3;

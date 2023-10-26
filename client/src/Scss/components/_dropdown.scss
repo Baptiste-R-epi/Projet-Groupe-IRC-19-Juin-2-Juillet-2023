@@ -1,0 +1,68 @@
+@mixin content ($bg : #c0c0c0, $btn-bg : #DDDDDD) {
+    display: none;
+    position: absolute;
+    background-color: $bg;
+    min-width: 125px;
+    
+    box-shadow: $base-box-shadow;
+    padding: $base-padding;
+    z-index: 1;
+
+    border-radius: $base-border-radius * 0.25;
+
+    &>a {
+        display: block;
+        padding: $base-padding;
+        text-decoration: none;
+        margin-bottom: $base-padding;
+        &:hover {
+            background-color: lighten($bg, 10);
+        }
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+@each $key,
+$val in $colors {
+    .dropdown-content-#{$key} {
+
+        @include content($val);
+
+        .dropdown:hover & {
+            display: block;
+            margin-top: $base-padding * 3.4;
+            right: 0px;
+        }
+    }
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    @include content;
+
+    .dropdown:hover & {
+        display: block;
+        margin-top: $base-padding * 3.4;
+        justify-content: center;
+    }
+}
+
+@each $key,
+$val in $colors {
+    .dropdown-btn-bg-#{$key} {
+
+        &>.btn {
+            background-color: $val;
+        }
+
+        &>.btn:hover {
+            background-color: lighten($val, 12);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+* {
+    color: inherit;
+    margin: 0;
+    // outline: 1px solid red;
+}
+
+// ul {
+//     padding: 0;
+//     list-style-type: none;
+// }
+
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #acacaf;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hidden-print {
+    visibility: hidden;
+}
+
+.visible-print {
+    visibility: visible;
+}

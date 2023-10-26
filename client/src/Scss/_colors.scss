@@ -1,0 +1,68 @@
+@each $key,
+$val in $colors {
+    .text-#{$key} {
+        color: $val;
+    }
+
+    .text-hover-#{$key} {
+        transition: all .275s ease-in-out;
+
+        &:hover {
+            transition: all .275s ease-in-out;
+            color: $val;
+        }
+    }
+
+    .bg-#{$key} {
+        background-color: $val;
+    }
+
+
+    .bg-#{$key}-transparent {
+
+        background-color: rgba($val, 0.7);
+    }
+
+    @if ($val !=black and $val !=white) {
+
+        // light variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-light-#{$i} {
+                color: mix(white, $val, ($i * 10%));
+            }
+
+            .text-hover-#{$key}-light-#{$i} {
+                transition: all .275s ease-in-out;
+
+                &:hover {
+                    transition: all .275s ease-in-out;
+                    color: mix(white, $val, ($i * 10%));
+                }
+            }
+
+            .bg-#{$key}-light-#{$i} {
+                background-color: mix(white, $val, ($i * 10%));
+            }
+        }
+
+        // dark variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-dark-#{$i} {
+                color: mix(black, $val, ($i * 10%));
+            }
+
+            .text-hover-#{$key}-dark-#{$i} {
+                transition: all .275s ease-in-out;
+
+                &:hover {
+                    transition: all .275s ease-in-out;
+                    color: mix(black, $val, ($i * 10%));
+                }
+            }
+
+            .bg-#{$key}-dark-#{$i} {
+                background-color: mix(black, $val, ($i * 10%));
+            }
+        }
+    }
+}

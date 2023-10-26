@@ -1,0 +1,71 @@
+%flex-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.navbar {
+    @extend %flex-layout;
+    padding: $base-padding ($base-padding * 2);
+    box-shadow: $base-box-shadow;
+
+    .site-title {
+        font-size: $lg-font-size;
+    }
+
+    .container {
+        @extend %flex-layout;
+    }
+
+    .container-fluid {
+        @extend %flex-layout;
+    }
+}
+
+@each $key,
+$val in $colors {
+    .navbar-#{$key} {
+        @extend .navbar;
+        background-color: $val;
+    }
+
+    @for $i from 1 through 9 {
+        .navbar-#{$key}-light-#{$i} {
+            color: mix(white, $val, ($i * 10%));
+        }
+
+        .navbar-hover-#{$key}-light-#{$i} {
+            transition: all .275s ease-in-out;
+
+            &:hover {
+                transition: all .275s ease-in-out;
+                color: mix(white, $val, ($i * 10%));
+            }
+        }
+
+        .navbar-#{$key}-light-#{$i} {
+            background-color: mix(white, $val, ($i * 10%));
+        }
+    }
+
+    @for $i from 1 through 9 {
+        .navbar-#{$key}-dark-#{$i} {
+            color: mix(black, $val, ($i * 10%));
+        }
+
+        .navbar-hover-#{$key}-dark-#{$i} {
+            transition: all .275s ease-in-out;
+
+            &:hover {
+                transition: all .275s ease-in-out;
+                color: mix(black, $val, ($i * 10%));
+            }
+        }
+
+        .navbar-#{$key}-dark-#{$i} {
+            background-color: mix(black, $val, ($i * 10%));
+        }
+    }
+}

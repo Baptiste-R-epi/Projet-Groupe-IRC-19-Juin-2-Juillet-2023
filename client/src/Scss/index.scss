@@ -1,0 +1,25 @@
+// This import manages the variables that I use troughout the sass librairie 
+@import 'functions';
+@import 'variables';
+
+// This import manage the 'reset' styles
+@import 'base';
+@import 'breakpoints';
+@import 'grid';
+@import 'images';
+@import 'visibility';
+
+// Colors
+@import 'colors';
+
+// Components : btn, card, navbar ...
+@import 'components/card';
+@import 'components/button';
+@import 'components/navbar';
+@import 'components/alert';
+@import 'components/dropdown';
+@import 'components/popins';
+@import 'components/form';
+
+// Utils : margin, padding ...
+@import 'utils';

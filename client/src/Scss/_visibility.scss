@@ -1,0 +1,49 @@
+@include xs {
+    .visible-xs {
+        display: inherit;
+    }
+
+    .hidden-xs {
+        display: none;
+    }
+}
+
+@include sm {
+    .visible-sm {
+        display: inherit;
+    }
+
+    .hidden-sm {
+        display: none;
+    }
+}
+
+@include md {
+    .visible-md {
+        display: inherit;
+    }
+
+    .hidden-md {
+        display: none;
+    }
+}
+
+@include lg {
+    .visible-lg {
+        display: inherit;
+    }
+
+    .hidden-lg {
+        display: none;
+    }
+}
+
+@include xl {
+    .visible-xl {
+        display: inherit;
+    }
+
+    .hidden-xl {
+        display: none;
+    }
+}

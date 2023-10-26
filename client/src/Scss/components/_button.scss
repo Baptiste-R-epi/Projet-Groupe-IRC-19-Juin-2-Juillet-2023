@@ -1,0 +1,112 @@
+@mixin btn($bg-color: #e2e2e2) {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    background-color: $bg-color;
+}
+
+.btn {
+    @include btn;
+}
+
+@each $key,
+$val in $colors {
+    .btn-#{$key} {
+        @include btn($val);
+        transition: all .275s ease-in-out;
+        background-color: $val;
+
+        &:hover {
+            transition: all .275s ease-in-out;
+            background-color: lighten($val, 5);
+        }
+
+        &:active {
+            background-color: lighten($val, 10);
+        }
+    }
+
+    .btn-line-#{$key} {
+        @include btn(#fff);
+        border: $base-border-thickness solid $val;
+        transition: all .275s ease-in-out;
+
+        &:hover {
+            transition: all .275s ease-in-out;
+            background-color: $val;
+        }
+
+        border: $base-border-thickness solid $val;
+
+        &:active {
+            background-color: lighten($val, 10);
+        }
+
+    }
+
+    .btn-complementary-#{$key} {
+        @include btn($val);
+        color: light-comp($val);
+        transition: all .275s ease-in-out;
+
+        &:hover {
+            transition: all .275s ease-in-out;
+            background-color: light-comp($val);
+            color: $val;
+        }
+
+        &:active {
+            background-color: lighten($val, 10);
+        }
+    }
+
+    @for $i from 1 through 9 {
+        .btn-#{$key}-light-#{$i} {
+            color: mix(white, $val, ($i * 10%));
+        }
+
+        .btn-hover-#{$key}-light-#{$i} {
+            transition: all .275s ease-in-out;
+
+            &:hover {
+                transition: all .275s ease-in-out;
+                color: mix(white, $val, ($i * 10%));
+            }
+        }
+
+        .btn-#{$key}-light-#{$i} {
+            background-color: mix(white, $val, ($i * 10%));
+        }
+    }
+
+    @for $i from 1 through 9 {
+        .btn-#{$key}-dark-#{$i} {
+            color: mix(black, $val, ($i * 10%));
+        }
+
+        .btn-hover-#{$key}-dark-#{$i} {
+            transition: all .275s ease-in-out;
+
+            &:hover {
+                transition: all .275s ease-in-out;
+                color: mix(black, $val, ($i * 10%));
+            }
+        }
+
+        .btn-#{$key}-dark-#{$i} {
+            background-color: mix(black, $val, ($i * 10%));
+        }
+    }
+}
+
+button:disabled {
+    background-color: darkgrey;
+    cursor: not-allowed;
+}
+
+.btn-nc{
+    cursor: text;
+}

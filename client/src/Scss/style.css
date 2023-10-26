@@ -1,0 +1,260 @@
+#root,
+body {
+	height: max-content;
+}
+
+dialog::backdrop {
+	background-color: #252525ab;
+}
+
+dialog {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	border-radius: 6px;
+	border-width: 3px;
+}
+
+dialog .btn-success {
+	position: relative;
+	left: 100%;
+	translate: -100%;
+}
+
+.span-sidenav {
+	color: rgb(255, 255, 255);
+	width: max-content;
+	cursor: pointer;
+	display: flex;
+	text-align: left;
+	background-color: #5933ac;
+	padding: 5px;
+	border-radius: 0 5px 5px 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav a,
+.sidenav button,
+.sidenav div,
+.sidenav ul,
+.sidenav li,
+.sidenav p {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #c7c5c5;
+	display: block;
+	transition: 0.3s;
+	text-align: left;
+	background: unset;
+	background-color: unset;
+	border: unset;
+	border-radius: unset;
+}
+
+
+.sidenav a:hover,
+.sidenav button:hover,
+.sidenav div:hover,
+.sidenav ul:hover,
+.sidenav li:hover,
+.sidenav p:hover {
+	color: #f1f1f1;
+	transform: scale(0.99);
+	background: unset;
+	background-color: unset;
+	border: unset;
+	border-radius: unset;
+	cursor: pointer;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+
+	.sidenav a {
+		font-size: 16px;
+	}
+}
+
+body {
+	margin: 0;
+	padding-bottom: 3rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	background-color: #333;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+#form-message {
+	background: #5933ac;
+	padding: 0.35rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	height: 3rem;
+	box-sizing: border-box;
+	backdrop-filter: blur(10px);
+}
+
+
+#form-message>button {
+	background: #333;
+	border: none;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 0 2.7rem;
+	margin: 0.25rem;
+	border-radius: 3px;
+	outline: none;
+	color: #fff;
+	transition: all ease-in-out 500ms;
+}
+
+#form-message>button:hover {
+	background: #333333da;
+	color: #ddd;
+	transition: all ease-in-out 500ms;
+}
+
+.form-user {
+	padding: 1.7rem;
+	background-color: #6c42c7;
+}
+
+.btn-custom {
+	background: #333;
+	border: none;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 0 2.7rem;
+	margin: 0.25rem;
+	border-radius: 3px;
+	outline: none;
+	color: #fff;
+	transition: all ease-in-out 500ms;
+}
+
+.btn-custom:hover {
+	background: #333333da;
+	color: #ddd;
+	transition: all ease-in-out 500ms;
+}
+
+#input-message {
+	border: none;
+	padding: 0 1rem;
+	flex-grow: 1;
+	border-radius: 2rem;
+	margin: 0.25rem;
+	transition: all ease-in-out 500ms;
+}
+
+#input-message:focus {
+	outline: none;
+}
+
+.username-input {
+	border: none;
+	padding: 0 1.7rem;
+	flex-grow: 1;
+	border-radius: 2rem;
+	margin: 0.25rem;
+	transition: all ease-in-out 500ms;
+}
+
+.username-input:focus {
+	outline: none;
+}
+
+#chanels {
+	margin: 0.1rem;
+}
+
+
+#user-form {
+	margin-top: 2rem;
+	background: rgba(0, 0, 0, 0.15);
+	padding: 0.25rem;
+	display: flex;
+	height: 3rem;
+	box-sizing: border-box;
+	backdrop-filter: blur(10px);
+}
+
+.hidden {
+	display: none;
+}
+
+#messages {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+}
+
+#messages>li {
+	padding: 0.5rem 1rem;
+	font-weight: 600;
+	font-size: 18px;
+	color: white;
+}
+
+#messages>li:nth-child(odd) {
+	background: #454545;
+}
+
+.overflow-y {
+	overflow-y: scroll;
+}
+
+#myFIrstDialog {
+	width: 50%;
+	background-color: #F4FFEF;
+	border: 1px dotted black;
+}
+
+.boss-bar {
+	width: 35%;
+	height: 25px;
+	background-color: #16c007;
+	border-radius: 2rem;
+}
+
+.stan-bar {
+	width: 0;
+	height: 100%;
+	background-color: #c51414;
+	border-radius: 2rem 0 0 2rem;
+	transition: all linear 1s;
+}

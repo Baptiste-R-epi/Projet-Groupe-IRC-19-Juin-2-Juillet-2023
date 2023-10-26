@@ -1,0 +1,16 @@
+@each $key,
+$val in $colors {
+    .alert-#{$key} {
+        background-color: lighten($val, 10);
+        border-radius: 8px;
+        border: 1.75px solid darken($val, 18);
+        word-wrap: break-word;
+        color: darken($val, 25);
+        padding: $base-padding * 0.75;
+        text-align: center;
+        &>a {
+            text-decoration: underline;
+            color: darken($val, 35);
+        }
+    }
+}

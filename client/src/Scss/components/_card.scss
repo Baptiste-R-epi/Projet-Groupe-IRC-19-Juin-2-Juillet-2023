@@ -1,0 +1,50 @@
+
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 25px;
+    // max-width: 400px;
+    background-color: #fff9d1;
+    width: 60%;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.bigCard {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 25px;
+    // max-width: 400px;
+    background-color: #e9cf88;
+    width: 100%;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
